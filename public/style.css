@@ -1,0 +1,288 @@
+body{
+    margin: 0px;
+    padding: 0px;
+     
+}
+ 
+/* for the navigation bar */
+
+.navbar{
+background-image: url('https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+background-size: cover;
+background-position: center;
+padding: 20px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+ font-family: "Montserrat", sans-serif;
+ font-size: 2rem;
+ 
+
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.navbar a:hover{
+    color: rgb(135, 131, 215)
+}
+
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight:bold;
+
+}
+
+.navbar .links   {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn{
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdown_menu {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  pointer-events: none;  
+}
+
+.dropdown_menu.open {
+  max-height: 500px;  
+  opacity: 1;
+  pointer-events: auto;  
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+@media (max-width: 992px) {
+  .navbar .navbar-links,
+  .navbar .links {
+    display: none;
+
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  /* for the footer */
+
+  .footer .content-right{
+    display: none;
+  }
+
+}
+
+
+/* for the footer */
+
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding: 20px;
+    background-color: rgb(26, 24, 24);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+
+    font-family: 'Open Sans', sans-serif;
+    
+
+
+}
+
+.footer .content-left li{
+    list-style: none;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.footer .content-left{
+
+    margin-top: 30px;
+}
+
+.footer .content-middle i{
+    font-size: 2.7rem;
+    color: rgb(103, 86, 211);
+    transition: 0.2s;
+}
+
+.footer .content-middle i:hover{
+    color: rgb(162, 154, 210);
+    transition: 0.2s;
+}
+.footer .content-middle .icons{
+    display: flex;
+    gap: 25px;
+    margin-top: 60px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.footer .content-middle .copyright p{
+    padding: 0px;
+    margin: 0px;
+}
+
+.footer .content-middle .copyright{
+    margin-top: 100px;
+    font-size: 0.8rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+   
+}
+.footer .content-right{
+    display: flex;
+    flex-direction: column;
+}
+.footer .content-right input{
+    border-radius: 10px;
+    width: 300px;
+    height: 20px;
+    padding: 10px;
+    border-style: solid;
+    border-color: aquamarine;
+    margin-bottom: 20px;
+    transform: 0.2s;
+}
+
+.footer .content-right button{
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    border-color: aquamarine;
+    margin-bottom: 20px;
+    background-color: rgb(17, 189, 189);
+    transition: 0.2s;
+}
+
+.footer .content-right button:hover{
+    background-color: rgb(20, 92, 92);
+    border-style: solid;
+    border-color: rgb(41, 41, 98);
+    transition: 0.2s;
+}
+
+@media (max-width: 992px){
+
+    .footer{
+        padding: 10px;
+    }
+    .footer .content-right{
+        display:none;
+
+    }
+
+    .footer .content-middle i{
+        font-size: 2rem;
+    }
+    .footer .content-left li{
+    list-style: none;
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+}
+
+.footer .content-middle .copyright{
+    margin-right: 100px;
+}
+
+}
+
+
+/* main body styling */
+
+.main-body{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8rem;
+    text-align: left;
+    
+}
+
+ .main-body .content-left button {
+  background: linear-gradient(135deg, #1e3c72, #2a5298); 
+  color: white;
+  padding: 10px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(30, 60, 114, 0.4);
+  transition: all 0.3s ease;
+  width: 400px;
+  height: 40px;
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+
+ .main-body .content-left button:hover {
+  background: linear-gradient(135deg, #2a5298, #1e3c72);  
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(30, 60, 114, 0.6);
+}
+
+ .content-rights{
+    background-image: url("https://images-assets.nasa.gov/image/s130e006575/s130e006575~large.jpg?w=1920&h=1311&fit=crop&crop=faces%2Cfocalpoint");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: rgb(24, 26, 25);
+    width: 900px;
+    height: 400px;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+#main-body {
+  height: 100vh;
+   
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  color: white; /* to make text visible on dark background */
+}
+
+.content-left, .content-rights {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
