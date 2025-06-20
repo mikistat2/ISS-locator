@@ -70,7 +70,8 @@ justify-content: space-between;
 .dropdown_menu.open {
   max-height: 500px;  
   opacity: 1;
-  pointer-events: auto;  
+  pointer-events: auto;
+  z-index: 1;  
 }
 
 .dropdown_menu li {
@@ -233,6 +234,7 @@ justify-content: space-between;
     font-family: "Montserrat", sans-serif;
     font-size: 1.8rem;
     text-align: left;
+    color: #ac6c6c !important;
     
 }
 
@@ -258,6 +260,10 @@ justify-content: space-between;
   box-shadow: 0 8px 20px rgba(30, 60, 114, 0.6);
 }
 
+.main-body .content-left p {
+    color: rgb(225, 203, 174) !important;
+}
+
  .content-rights{
     background-image: url("https://images-assets.nasa.gov/image/s130e006575/s130e006575~large.jpg?w=1920&h=1311&fit=crop&crop=faces%2Cfocalpoint");
     background-position: center;
@@ -272,17 +278,68 @@ justify-content: space-between;
     margin-left: 10px;
 }
 
-#main-body {
-  height: 100vh;
-   
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  color: white; /* to make text visible on dark background */
+
+
+@media (max-width: 992px){
+
+    .main-body{
+    
+    font-size: 1.5rem;
+    padding-top: 100px;
+    
+}
+.content-rights{
+    display: none;
 }
 
-.content-left, .content-rights {
-  position: relative;
-  z-index: 2;
-  padding: 20px;
+}
+
+
+/* for the about page  */
+
+.about-me-container  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    text-align: center;
+
+}
+
+.about-me-container img {
+    border-radius: 50%;
+    width: 200px;
+    height: auto;
+}
+
+
+/* for the result part */
+
+.result-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.result-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    
+
+}
+.result-part{
+
+    height: 400px;
+    width: 400px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+    border-color: aqua;
+    padding: 20px;
 }

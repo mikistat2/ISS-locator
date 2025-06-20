@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <%- include("patials/header.ejs") %>
+
+    <div class="result-container">
+
+        <div class="result-part">
+            
+    <% if (errorMessage === 1){ %>
+        
+        <h3 style="color: red;"> <%= errorContent %></h3>
+        
+   <% }else { %>
+    <div><strong>Name:</strong> <%= data.name %></div>
+    <div><strong>ID:</strong> <%= data.id %></div>
+    <div><strong>Latitude:</strong> <%= data.latitude %></div>
+    <div><strong>Longitude:</strong> <%= data.longitude %></div>
+    <div><strong>Altitude:</strong> <%= data.altitude %> km</div>
+    <div><strong>Velocity:</strong> <%= data.velocity %> km/h</div>
+    <div><strong>Visibility:</strong> <%= data.visibility %></div>
+    <div><strong>Footprint:</strong> <%= data.footprint %> km</div>
+    <div><strong>Timestamp:</strong> <%= data.timestamp %></div>
+    <div><strong>Day Number:</strong> <%= data.daynum %></div>
+    <div><strong>Solar Latitude:</strong> <%= data.solar_lat %></div>
+    <div><strong>Solar Longitude:</strong> <%= data.solar_lon %></div>
+    <div><strong>Units:</strong> <%= data.units %></div>
+
+    
+    <h3>⚠️ To view the location copy and past the latitude and longtude in the form of : Latitude,Longitude </h3>
+
+    <% } %>
+            </div>
+
+    </div>
+
+    
+    <%- include("patials/footer.ejs") %>
+    
+</body>
+</html>
