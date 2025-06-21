@@ -1,0 +1,14 @@
+apikey.txt
+git rm --cached public/images/profile.png
+
+
+# default values
+node_modules/
+.env
+logs
+*.log
+.vscode/
+.DS_Store
+coverage/
+dist/
+build/

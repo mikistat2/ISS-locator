@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include("patials/header.ejs") %>
+
+    <div id="map" style="height: 500px; width: 100%;"></div>
+    <script>
+  let map;
+  let marker;
+
+  function initMap() {
+    const issLocation = {
+      lat: <%- Number(issLocation.lat) %>,
+      lng: <%- Number(issLocation.lng) %>
+    };
+
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: issLocation,
+      zoom: 3,
+      mapTypeId: "satellite"
+    });
+
+    marker = new google.maps.Marker({
+      position: issLocation,
+      map: map,
+      title: "International Space Station"
+    });
+  }
+</script>
+
+
+
+
+    <%- include("patials/footer.ejs") %>
+
+    <script
+  src="https://maps.googleapis.com/maps/api/js?key=<%=apikeycontent%>&callback=initMap"
+  async defer>
+</script>
+
+</body>
+</html>
